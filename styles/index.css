@@ -1,0 +1,23 @@
+body {
+/*    background-image: url(/images/back.jpg);*/
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Verdana';
+}
+form ul{
+    margin: 0px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    list-style-type: none;
+    text-align: center;
+}
+
+input[type='submit'] {
+    margin-bottom: 0px;
+    display: inline-block;
+    text-align: center;
+    line-height: 39px;
+    height: 29px;
+    width: 100px;
+}
+

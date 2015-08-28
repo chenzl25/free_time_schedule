@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>三楼书库空余时间登记系统</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <script src="scripts/jquery.min.js" type="text/javascript"></script>
+    <script>
+    function check(event) {
+
+        var id = $('#id');
+        var name = $('#name');
+        var re = /^\d{8}$/;
+        if (!id.val()) {
+            alert('你学号还没填哦。');
+            name.focus();
+            event.preventDefault();
+            return false;
+        } else if (!name.val()) {
+            alert('你名字还没填哦。');
+            name.focus();
+            event.preventDefault();
+            return false;
+        } else if (!re.test(id.val())) {
+            alert('你学号填写有问题哦。')
+            event.preventDefault();
+            return false;
+        } else {
+            var form = document.getElementById('#login');
+            form.submit();
+            return true;
+        }
+    }
+    </script>
+    
+</head>
+
+<body>
+    <form id="login" action="table" method="post" accept-charset="utf-8">
+        <ul>
+        	<li><h1>请填写你的学号与姓名</h1></li>
+            <li>
+                <label for="id">学号</label>
+                <input type="text" id="id" name="id" />
+            </li>
+            <br />
+            <li>
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name">
+            </li>
+            <br />
+            <li class="submit_list">
+                <input type="submit" id="submit" value="登陆" onclick="check(event)" />
+            </li>
+            <li><p>有问题请联系 QQ：595084778</p></li>
+        </ul>
+    </form>
+</body>
+
+</html>

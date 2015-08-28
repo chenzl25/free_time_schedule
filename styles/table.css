@@ -1,0 +1,30 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Verdana';
+    text-align: center;
+}
+div.table {
+	margin:0 auto;
+	width: 600px;
+	height: 400px
+}
+table {
+  font: 100% sans-serif;
+  background-color: #eeffee;
+  border-collapse: collapse;
+  border: 1px solid #7a7;
+}
+table th, table td {
+	border:solid 1px black;
+}
+div.note textarea {
+	width:  600px;
+	font-family: Arial;
+}
+#submit {
+    line-height: 39px;
+    height: 29px;
+    width: 100px;
+    margin-top: 10px;
+}
