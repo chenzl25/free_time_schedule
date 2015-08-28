@@ -7,11 +7,12 @@
 #include <sstream>
 #include <cstring>
 using namespace std;
-string slist[31] = {"Mon_m1", "Tue_m1", "Wed_m1", "Thu_m1", "Fri_m1", "Sat_m1", "Sun_m1",
-			"Mon_m2", "Tue_m2", "Wed_m2", "Thu_m2", "Fri_m2",
-			"Mon_a1", "Tue_a1", "Wed_a1", "Thu_a1", "Fri_a1", "Sat_a1", "Sun_a1",
-			"Mon_a2", "Tue_a2", "Wed_a2", "Thu_a2", "Fri_a2",
-			"Mon_d1", "Tue_d1", "Wed_d1", "Thu_d1", "Fri_d1", "Sat_d1", "Sun_d1"};
+string slist[31] = { 
+"Mon_m1","Mon_m2","Mon_a1","Mon_a2","Mon_d1","Tue_m1","Tue_m2","Tue_a1","Tue_a2","Tue_d1",
+"Wed_m1","Wed_m2","Wed_a1","Wed_a2","Wed_d1","Thu_m1","Thu_m2","Thu_a1","Thu_a2","Thu_d1",
+"Fri_m1","Fri_m2","Fri_a1","Fri_a2","Fri_d1",
+"Sat_m1","Sat_a1","Sat_d1",
+"Sun_m1","Sun_a1","Sun_d1"};
 vector<int> ivec;
 map<int, string> m;
 struct Student {
@@ -29,8 +30,8 @@ int main() {
 	for (int i = 0; i < 31; i++) {
 		m[i] = slist[i];
 	}
-	ofstream out("workers.json");
-	ifstream in("workers.txt");
+	ofstream out("import_workers.json");
+	ifstream in("t1.txt");
 	string s;
 	while(getline(in, s)) {
 		stringstream ss(s);
